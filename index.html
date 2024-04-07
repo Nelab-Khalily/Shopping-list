@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping List</title>
+    <!-- tailwind link for styles -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- i searched and found many class styles in css from documentation and used them all here ) but it really looked like css the most specially flexbox classes -->
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+    <div class="w-1/2 bg-white shadow-lg rounded-lg p-6">
+        <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                </svg>
+                <h1 class="text-xl font-semibold text-purple-800">Grocery List</h1>
+            </div>
+            <form id="list-form" class="flex">
+                <input type="text" id="item-input" placeholder="Enter item..." class="border border-purple-400 px-2 py-1 mr-2">
+                <select id="category-select" class="border border-purple-400 px-2 py-1 mr-2">
+                    <option value="">Select category...</option>
+                    <option value="Fruit" class="bg-pink-200">Fruit</option>
+                    <option value="Dairy" class="bg-green-200">Dairy</option>
+                    <option value="Grain" class="bg-yellow-200">Grain</option>
+                </select>
+                <button type="submit" id="add-btn" class="bg-purple-500 text-white px-4 py-1 rounded">Add</button>
+            </form>
+        </div>
+        <div class="divide-y divide-gray-400">
+            <ul id="list-items" class="py-2">
+            </ul>
+        </div>
+    </div>
+
+    <!-- the link to js page -->
+    <script src="main.js"></script>
+</body>
+</html>
